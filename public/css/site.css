@@ -1,0 +1,49 @@
+/* Shared footer and the About / Contact / Privacy / Terms pages */
+
+.sitefoot { margin-top: 32px; background: var(--white); border-top: 1px solid var(--border); font-size: 14px; color: var(--text-muted); }
+.sf-wrap { max-width: 1160px; margin: 0 auto; padding: 40px 24px 20px; }
+.sf-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.4fr; gap: 32px; }
+.sf-grid h4 { margin: 0 0 12px; color: var(--text); font-size: 15px; }
+.sf-grid a { display: block; margin-bottom: 9px; }
+.sf-grid a:hover { color: var(--blue); }
+.sf-grid p { line-height: 1.7; margin: 8px 0 0; }
+.sf-grid p a { display: inline; }
+.sf-about p { max-width: 290px; }
+.sf-social { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; }
+.sf-social a { margin: 0; font-weight: 600; }
+.sf-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 13px; }
+
+/* On the shop pages the footer sits inside the main column */
+.content .sitefoot { margin-top: 40px; border: 1px solid var(--border); border-radius: var(--radius-lg); }
+
+/* Text pages */
+.pagehead { background: linear-gradient(180deg, var(--blue-light), var(--white)); padding: 48px 0 30px; }
+.pagehead h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+.pagehead p { max-width: 640px; font-size: 17px; color: var(--text-muted); line-height: 1.6; }
+.doc { max-width: 780px; margin: 0 auto; padding: 32px 24px 24px; line-height: 1.75; font-size: 16px; }
+.doc h2 { margin: 34px 0 10px; font-size: 22px; font-weight: 800; }
+.doc p { margin: 0 0 14px; }
+.doc ul { margin: 0 0 16px; padding-left: 22px; list-style: disc; }
+.doc li { margin-bottom: 6px; }
+.doc a { color: var(--blue); font-weight: 600; }
+.doc .meta { color: var(--text-muted); font-size: 14px; }
+.infocard { margin: 20px 0; padding: 22px 24px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); line-height: 1.9; }
+.infocard b { display: inline-block; min-width: 150px; }
+.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+.twocol > div { padding: 24px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.twocol h3 { margin-bottom: 8px; font-size: 19px; }
+.twocol p { color: var(--text-muted); margin: 0 0 14px; font-size: 15px; line-height: 1.65; }
+
+@media (max-width: 900px) {
+  .sf-grid { grid-template-columns: 1fr 1fr; }
+  .sf-about { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .pagehead h1 { font-size: 30px; }
+  .twocol { grid-template-columns: 1fr; }
+  .infocard b { display: block; min-width: 0; }
+  .sf-grid { grid-template-columns: 1fr; }
+}
+
+/* Buttons inside text pages keep their own colours */
+.doc a.btn-primary, .twocol a.btn-primary { color: #fff; }

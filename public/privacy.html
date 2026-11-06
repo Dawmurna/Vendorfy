@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Vendorfy</title>
+  <meta name="description" content="How Vendorfy collects, uses and protects your personal information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body data-page="landing">
+
+  <!-- Icon sprite: define each icon once, reuse with <use href="#i-name">.
+       Swap these for your exported Figma SVGs whenever you like. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 22l3-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.700-8 11-8 11z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 2 7 2 7H4s2-1 2-7z"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h10L20 7H6.500"/><circle cx="9" cy="19" r="1.500"/><circle cx="17" cy="19" r="1.500"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M7.500 12.500l3 3 6-6.500" stroke="#fff"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.500"/><circle cx="12" cy="12" r="1.500"/><circle cx="19" cy="12" r="1.500"/></symbol>
+  </svg>
+
+  <div class="toast" id="toast"></div>
+
+  <header class="lnav">
+    <div class="lwrap lnav-in">
+      <a href="index.html" class="logo">vendorfy</a>
+      <nav class="lnav-links">
+        <a href="shop.html">Products</a>
+        <a href="index.html#how">How it works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="vendor-login.html">Sell on Vendorfy</a>
+      </nav>
+      <div class="lnav-right">
+        <a href="login.html#signup" class="lnav-signup" id="signup-link">Sign up</a>
+        <div class="profile" id="profile"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="lwrap">
+        <h1>Privacy Policy</h1>
+        <p>What we collect, why we collect it, and the choices you have.</p>
+      </div>
+    </section>
+    <div class="doc">
+      <!-- DRAFT: have a lawyer review this before you rely on it. -->
+      <p class="meta">Last updated: <span data-site="lastUpdated"></span></p>
+      <p>This policy explains how <b data-site="companyName"></b> (trading as Vendorfy, "we", "us") handles your personal information when you use <span data-site="domain"></span>. We try to collect as little as we need, and we do not sell your information.</p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><b>Your account:</b> your name and email address.</li>
+        <li><b>Your delivery details:</b> name, phone number, address, city and state, when you save them or place an order.</li>
+        <li><b>Your activity:</b> your cart, wishlist and orders, so your account remembers them.</li>
+        <li><b>If you are a vendor:</b> your store name, category, contact details and the products and photos you upload.</li>
+        <li><b>Basic technical data:</b> things our server sees when you visit, such as your IP address, used to keep the site secure and to limit abuse.</li>
+      </ul>
+
+      <h2>How we use it</h2>
+      <ul>
+        <li>To create your account and send you the one-time code you use to log in.</li>
+        <li>To process your orders and pass the delivery details to the vendor who needs them.</li>
+        <li>To show you your cart, wishlist and order history.</li>
+        <li>To keep the site safe, prevent fraud and fix problems.</li>
+        <li>To reply when you contact us.</li>
+      </ul>
+
+      <h2>Who sees your information</h2>
+      <ul>
+        <li><b>Vendors</b> see your name, phone number, delivery address and any note you add, but only for the items in your order that they sell. They need it to deliver.</li>
+        <li><b>Service providers</b> that help us run the site, such as our hosting and email sending services, handle data on our behalf.</li>
+        <li><b>Authorities</b>, if the law requires us to share information.</li>
+      </ul>
+      <p>We do not sell your personal information to anyone.</p>
+
+      <h2>Cookies and storage</h2>
+      <p>We use one cookie to keep you logged in. It is set by our server and cannot be read by scripts on the page. We also store your cart and wishlist in your browser while you are not logged in, so they are not lost. We do not use advertising cookies.</p>
+
+      <h2>How long we keep it</h2>
+      <p>We keep your account and order history while your account is active and as long as we need it for records, disputes and legal obligations. Login codes expire after 10 minutes and are deleted.</p>
+
+      <h2>How we protect it</h2>
+      <p>Login codes are stored in scrambled form, accounts can only see their own data, and the site is served over a secure connection. No system is perfectly secure, but we take care to protect what you share with us.</p>
+
+      <h2>Your choices and rights</h2>
+      <p>You can see and update your name and delivery details on your account page. You can ask us to give you a copy of your information, correct it, or delete your account by emailing <span data-site-email></span>. We will respond within a reasonable time. Where the Nigeria Data Protection Act applies, you also have the rights it gives you.</p>
+
+      <h2>Children</h2>
+      <p>Vendorfy is not meant for people under 18, and we do not knowingly collect information from children.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we change this policy we will update the date at the top. If the change is important we will tell you on the site.</p>
+
+      <h2>Contact</h2>
+      <p>For any privacy question, email <span data-site-email></span> or write to <span data-site="companyName"></span>, <span data-site="address"></span>.</p>
+    </div>
+  </main>
+
+  <footer class="lfoot"></footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--blue);
+  color: var(--blue);
+  background: var(--white);
+  padding: 7px 16px;
+  font-size: 13px;
+}
+
+/* ---------- Image placeholder ---------- */
+/* Grey box shows until you add the real photo to /images */
+.thumb {
+  background: var(--grey-box);
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Category tile ---------- */
+.category-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.category-tile {
+  flex: 1 0 auto;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.category-tile.active {
+  background: var(--blue-light);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* ---------- Product card ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gap);
+  margin-top: 14px;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .thumb {
+  aspect-ratio: 1 / 0.95;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+}
+
+.wish-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+.wish-btn .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.wish-btn.liked .icon {
+  fill: var(--red);
+  stroke: var(--red);
+}
+
+.card-body {
+  padding: 10px 6px 4px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.verified {
+  color: var(--blue);
+}
+
+.rating {
+  color: var(--star);
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 4px 0 10px;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.price {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.old-price {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-decoration: line-through;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.cart-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+.cart-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- Vendor card ---------- */
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gap);
+  margin-top: 14px;
+}
+
+.vendor-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 8px 8px 14px;
+  text-align: center;
+}
+
+.vendor-card .thumb {
+  aspect-ratio: 1 / 0.6;
+}
+
+.vendor-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blue-border);
+  border: 3px solid var(--white);
+  margin: -28px auto 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vendor-card .name {
+  font-weight: 700;
+}
+
+.vendor-card .cat {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 2px 0 10px;
+}
+
+.vendor-card .btn-outline {
+  width: 80%;
+}
+
+/* ---------- Polish: hover states, focus, small details ---------- */
+.btn, .cart-btn, .wish-btn, .category-tile, .product-card, .vendor-card {
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s, border-color 0.15s, color 0.15s;
+}
+.btn-primary:hover { background: #0f93e8; }
+.btn-outline:hover { background: var(--blue-light); }
+
+.product-card, .vendor-card { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); }
+.product-card:hover, .vendor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(20, 40, 80, 0.10);
+}
+
+.thumb-link { display: block; width: 100%; height: 100%; }
+.thumb img { transition: transform 0.3s; }
+.product-card:hover .thumb img { transform: scale(1.04); }
+
+.card-title a:hover { color: var(--blue); }
+.cart-btn:hover { background: #0f93e8; transform: scale(1.08); }
+.cart-btn:active { transform: scale(0.95); }
+.wish-btn { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); z-index: 2; }
+.wish-btn:hover { transform: scale(1.1); }
+
+.category-tile:hover { border-color: var(--blue-border); color: var(--blue); }
+.category-row { scrollbar-width: thin; }
+.category-tile { white-space: nowrap; font-family: inherit; }
+
+.follow-btn.following { background: var(--blue); color: var(--white); }
+.link-blue:hover { text-decoration: underline; }
+
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+.rating-new { color: var(--blue); font-weight: 600; }
+.sell-btn { white-space: nowrap; padding: 9px 16px; font-size: 13px; }
+.sell-btn:hover { background: var(--blue-light); }
+@media (max-width: 1100px) { .sell-btn { display: none; } }
+.btn:disabled, .cart-btn:disabled { opacity: 0.45; cursor: not-allowed; }

@@ -1,0 +1,108 @@
+/* Cart, checkout, orders, wishlist and account pages */
+.page-title { font-size: 26px; font-weight: 800; margin-bottom: 18px; }
+.page-sub { color: var(--text-muted); margin: -10px 0 18px; font-size: 14px; }
+
+.cart-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+.cart-lines { display: grid; gap: 12px; }
+.line {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.lthumb { width: 84px; height: 84px; border-radius: 10px; background: var(--grey-box); overflow: hidden; }
+.lthumb img { width: 100%; height: 100%; object-fit: cover; }
+.line h3 { font-size: 15px; font-weight: 700; }
+.line h3 a:hover { color: var(--blue); }
+.line .sub { color: var(--text-muted); font-size: 13px; margin-top: 2px; }
+.line .warn { color: #b3261e; font-size: 13px; font-weight: 600; margin-top: 4px; }
+.line-right { display: grid; gap: 8px; justify-items: end; text-align: right; }
+.line-right .lp { font-weight: 800; }
+.stepper { display: flex; align-items: center; gap: 10px; }
+.stepper button { width: 30px; height: 30px; border-radius: 50%; background: var(--blue-light); color: var(--blue); font-size: 18px; line-height: 1; }
+.stepper button:disabled { opacity: 0.4; cursor: not-allowed; }
+.stepper output { min-width: 20px; text-align: center; font-weight: 700; }
+.remove-btn { color: #b3261e; font-size: 13px; font-weight: 600; }
+
+.summary {
+  position: sticky;
+  top: calc(var(--topbar-h) + 16px);
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.summary h2 { font-size: 18px; margin-bottom: 12px; }
+.sum-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; font-size: 14px; }
+.sum-row span:first-child { color: var(--text-muted); }
+.sum-row.total { margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 18px; font-weight: 800; }
+.sum-row.total span:first-child { color: var(--text); }
+.summary .btn { width: 100%; margin-top: 14px; padding: 14px; font-size: 15px; }
+.summary .fine { margin-top: 10px; font-size: 12px; color: var(--text-muted); }
+.sum-item { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; padding: 4px 0; }
+.sum-item span:first-child { color: var(--text); }
+
+.empty-state { padding: 60px 20px; text-align: center; background: var(--white); border: 1px dashed var(--border); border-radius: var(--radius-lg); }
+.empty-state h2 { margin-bottom: 8px; }
+.empty-state p { color: var(--text-muted); margin-bottom: 16px; }
+
+.guest-note { margin-bottom: 14px; padding: 12px 16px; background: var(--blue-light); color: #0b6aa8; border-radius: var(--radius); font-size: 14px; }
+
+/* Checkout */
+.checkout-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+.checkout-layout .panel { margin-bottom: 18px; }
+.pay-option { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1.5px solid var(--blue); background: var(--blue-light); border-radius: var(--radius); }
+.pay-option b { display: block; }
+.pay-option small { color: var(--text-muted); }
+.check { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14px; }
+
+/* Orders */
+.placed-banner { margin-bottom: 18px; padding: 16px 18px; background: #e6f7ec; color: #1b7a3a; border-radius: var(--radius); }
+.placed-banner b { display: block; font-size: 16px; }
+.order-card { margin-bottom: 16px; padding: 18px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.order-card.fresh { border-color: #35c759; box-shadow: 0 0 0 3px #e6f7ec; }
+.order-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.order-head b { font-size: 16px; }
+.order-head small { color: var(--text-muted); display: block; }
+.order-item { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto auto; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--border); }
+.oi-img { width: 56px; height: 56px; border-radius: 8px; background: var(--grey-box); overflow: hidden; }
+.oi-img img { width: 100%; height: 100%; object-fit: cover; }
+.order-item .t { font-weight: 600; font-size: 14px; }
+.order-item .s { color: var(--text-muted); font-size: 13px; }
+.order-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+.order-foot b { color: var(--text); font-size: 16px; }
+.pill.placed { background: #fff6e0; color: #8a5a00; }
+.pill.shipped { background: var(--blue-light); color: var(--blue); }
+.pill.delivered { background: #e6f7ec; color: #1b7a3a; }
+.pill.cancelled { background: var(--red-light); color: #b3261e; }
+.link-danger { color: #b3261e; font-weight: 600; font-size: 13px; }
+
+/* Account */
+.account-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px; align-items: start; }
+.stat-cards { display: grid; gap: 12px; }
+.stat-card { display: block; padding: 16px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color 0.15s; }
+.stat-card:hover { border-color: var(--blue); }
+.stat-card b { display: block; font-size: 24px; }
+.stat-card span { color: var(--text-muted); font-size: 13px; }
+
+.wish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--gap); }
+
+@media (max-width: 1100px) {
+  .wish-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .cart-layout, .checkout-layout, .account-grid { grid-template-columns: 1fr; }
+  .summary { position: static; }
+}
+@media (max-width: 600px) {
+  .line { grid-template-columns: 64px minmax(0, 1fr); }
+  .lthumb { width: 64px; height: 64px; }
+  .line-right { grid-column: 1 / -1; grid-template-columns: auto auto auto; justify-content: space-between; align-items: center; justify-items: start; text-align: left; }
+  .order-item { grid-template-columns: 48px minmax(0, 1fr); }
+  .order-item > :nth-child(3), .order-item > :nth-child(4) { grid-column: 2; }
+  .wish-grid { grid-template-columns: repeat(2, 1fr); }
+}

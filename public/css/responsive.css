@@ -1,0 +1,48 @@
+/* The Figma file is desktop only, so these are sensible starting points. Tweak to taste. */
+@media (max-width: 1280px) {
+  .product-grid, .vendor-grid { grid-template-columns: repeat(4, 1fr); }
+  .deliver { display: none; }
+}
+
+@media (max-width: 1000px) {
+  .product-grid, .vendor-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-about { grid-column: 1 / -1; }
+}
+
+@media (max-width: 800px) {
+  .app { grid-template-columns: 1fr; }
+
+  /* Sidebar becomes a slide-in menu opened by the hamburger button */
+  .sidebar {
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 270px;
+    transform: translateX(-100%);
+    transition: transform 0.25s;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .menu-btn { display: block; }
+
+  .topbar { padding: 0 14px; gap: 12px; }
+  .profile { padding-left: 0; border-left: 0; }
+  .profile span { display: none; }
+  .content { padding: 14px; }
+  .footer { padding: 32px 14px 16px; }
+
+  .product-grid, .vendor-grid { grid-template-columns: repeat(2, 1fr); }
+  .banner { height: 220px; padding: 0 20px; }
+  .banner h1 { font-size: 28px; }
+  .banner p { font-size: 15px; }
+  .banner-dots { left: 20px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .top-action { font-size: 0; gap: 0; }
+  .top-action .icon { font-size: 14px; }
+  .banner-tag { font-size: 11px; }
+  .banner h1 { font-size: 24px; }
+}

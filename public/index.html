@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendorfy | Shop from trusted vendors</title>
+  <meta name="description" content="Vendorfy is a marketplace where you can shop from trusted vendors and pay when your order arrives." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body data-page="landing">
+
+  <!-- Icon sprite: define each icon once, reuse with <use href="#i-name">.
+       Swap these for your exported Figma SVGs whenever you like. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 22l3-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.700-8 11-8 11z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 2 7 2 7H4s2-1 2-7z"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h10L20 7H6.500"/><circle cx="9" cy="19" r="1.500"/><circle cx="17" cy="19" r="1.500"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M7.500 12.500l3 3 6-6.500" stroke="#fff"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.500"/><circle cx="12" cy="12" r="1.500"/><circle cx="19" cy="12" r="1.500"/></symbol>
+  </svg>
+
+  <div class="toast" id="toast"></div>
+
+  <header class="lnav">
+    <div class="lwrap lnav-in">
+      <a href="index.html" class="logo">vendorfy</a>
+      <nav class="lnav-links">
+        <a href="shop.html">Shop</a>
+        <a href="#how">How it works</a>
+        <a href="vendor-login.html">Sell on Vendorfy</a>
+      </nav>
+      <div class="lnav-right">
+        <a href="login.html#signup" class="lnav-signup" id="signup-link">Sign up</a>
+        <div class="profile" id="profile"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="lhero">
+      <div class="lwrap lhero-in">
+        <div>
+          <span class="ltag">Trusted vendors. One marketplace.</span>
+          <h1>Shop what you love.<br />Pay when it arrives.</h1>
+          <p>Discover products from verified vendors across Nigeria. Order in minutes and pay only when your order is at your door.</p>
+          <div class="lcta">
+            <a class="btn btn-primary" href="shop.html">Start shopping</a>
+            <a class="btn btn-outline" href="login.html#signup" id="hero-signup">Create a free account</a>
+          </div>
+          <ul class="ltrust">
+            <li><svg class="icon"><use href="#i-check"/></svg>Verified vendors</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Pay on delivery</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Cancel before it ships</li>
+          </ul>
+        </div>
+        <div class="lhero-img">
+          <img src="images/banners/summer-sale.png" alt="" onerror="this.style.display='none'" />
+          <div class="lfloat"><b>Summer sale</b><span>Up to 50% off selected items</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="lsection">
+      <div class="lwrap">
+        <h2>Shop by category</h2>
+        <div class="lchips" id="chips"></div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="lsection lsoft" id="how">
+      <div class="lwrap">
+        <h2>How it works</h2>
+        <div class="lsteps">
+          <div class="lstep"><span>1</span><h3>Create a free account</h3><p>Just your name and email. We send you a code, so there is no password to remember.</p></div>
+          <div class="lstep"><span>2</span><h3>Pick what you love</h3><p>Browse products from verified vendors and add them to your cart.</p></div>
+          <div class="lstep"><span>3</span><h3>Pay on delivery</h3><p>The vendor delivers to your door. You pay when your order arrives.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fresh products (filled from the shop) -->
+    <section class="lsection" id="fresh-section" hidden>
+      <div class="lwrap">
+        <div class="lhead"><h2>Fresh on Vendorfy</h2><a class="link-blue" href="shop.html">See all products</a></div>
+        <div class="product-grid" id="fresh" style="margin-top:0"></div>
+      </div>
+    </section>
+
+    <!-- Become a vendor -->
+    <section class="lsection">
+      <div class="lwrap">
+        <div class="lsell">
+          <div>
+            <h2>Have something to sell?</h2>
+            <p>Open your store on Vendorfy, add your products and set your own prices. We bring the shoppers.</p>
+          </div>
+          <a class="btn lsell-btn" href="vendor-login.html#register">Open your store</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lfoot">
+    <div class="lwrap lfoot-in">
+      <a href="index.html" class="logo" style="padding:0">vendorfy</a>
+      <nav>
+        <a href="shop.html">Shop</a>
+        <a href="vendor-login.html">Sell on Vendorfy</a>
+        <a href="login.html">Log in</a>
+      </nav>
+      <span>&copy; 2026 Vendorfy. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+</html>

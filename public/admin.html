@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Vendorfy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/vendor.css" />
+</head>
+<body class="plain">
+  <header class="vbar">
+    <a href="index.html" class="logo">vendorfy</a>
+    <div class="vbar-right">
+      <b>Admin</b>
+      <a href="shop.html">View shop</a>
+      <button id="logout" style="color:var(--blue);font-weight:600">Log out</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h1>Vendors</h1>
+      <p class="muted" style="margin-bottom:14px">New vendors are listed first. A vendor's products only show in the shop once you approve them.</p>
+      <div id="list"><p class="muted">Loading...</p></div>
+    </section>
+  </main>
+
+  <script src="js/utils.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

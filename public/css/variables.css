@@ -1,0 +1,28 @@
+/* Colors, fonts and spacing live here so you only change them in one place.
+   Check these against the Figma right-hand panel and swap in the exact values. */
+:root {
+  --blue: #22a9fd;
+  --blue-light: #e8f5ff;
+  --blue-border: #7cc8f7;
+  --red: #ff3b30;
+  --red-light: #ffe9e7;
+  --star: #f5a623;
+  --text: #111111;
+  --text-muted: #6b6b6b;
+  --border: #ececec;
+  --bg: #fafafa;
+  --color-bg-page: var(--bg);
+  --white: #ffffff;
+  --grey-box: #f0f0f0;
+
+  --font: "Nunito", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --sidebar-w: 240px;
+  --topbar-h: 76px;
+  --gap: 16px;
+}

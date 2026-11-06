@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Vendorfy</title>
+  <meta name="description" content="The terms for shopping and selling on Vendorfy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body data-page="landing">
+
+  <!-- Icon sprite: define each icon once, reuse with <use href="#i-name">.
+       Swap these for your exported Figma SVGs whenever you like. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 22l3-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.700-8 11-8 11z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 2 7 2 7H4s2-1 2-7z"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h10L20 7H6.500"/><circle cx="9" cy="19" r="1.500"/><circle cx="17" cy="19" r="1.500"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M7.500 12.500l3 3 6-6.500" stroke="#fff"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.500"/><circle cx="12" cy="12" r="1.500"/><circle cx="19" cy="12" r="1.500"/></symbol>
+  </svg>
+
+  <div class="toast" id="toast"></div>
+
+  <header class="lnav">
+    <div class="lwrap lnav-in">
+      <a href="index.html" class="logo">vendorfy</a>
+      <nav class="lnav-links">
+        <a href="shop.html">Products</a>
+        <a href="index.html#how">How it works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="vendor-login.html">Sell on Vendorfy</a>
+      </nav>
+      <div class="lnav-right">
+        <a href="login.html#signup" class="lnav-signup" id="signup-link">Sign up</a>
+        <div class="profile" id="profile"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="lwrap">
+        <h1>Terms of Service</h1>
+        <p>The simple rules for using Vendorfy as a shopper or a vendor.</p>
+      </div>
+    </section>
+    <div class="doc">
+      <!-- DRAFT: have a lawyer review this before you rely on it. -->
+      <p class="meta">Last updated: <span data-site="lastUpdated"></span></p>
+      <p>These terms apply when you use <span data-site="domain"></span>, which is operated by <b data-site="companyName"></b> (trading as Vendorfy, "we", "us"). By creating an account or placing an order you agree to them. If you do not agree, please do not use the site.</p>
+
+      <h2>What Vendorfy is</h2>
+      <p>Vendorfy is a marketplace. Products are listed, priced, sold and delivered by independent vendors. Vendorfy provides the platform that connects shoppers and vendors, and is not the seller of the products unless we say so.</p>
+
+      <h2>Accounts</h2>
+      <ul>
+        <li>You must be at least 18 to create an account.</li>
+        <li>Give us a real name and an email address you own. We use a one-time code sent to that email to log you in.</li>
+        <li>Keep access to your email safe. You are responsible for activity on your account.</li>
+        <li>We may suspend or close accounts that break these terms or are used to cheat or harm others.</li>
+      </ul>
+
+      <h2>Buying</h2>
+      <ul>
+        <li>You need an account to place an order. You can browse and fill a cart without one.</li>
+        <li>Prices are set by vendors and shown in naira. The price you see at checkout is the price you pay.</li>
+        <li>Payment is on delivery. Please be available to receive your order and have the right amount ready.</li>
+        <li>Placing an order is a request to buy. It is confirmed when the vendor ships it. Stock is limited, and an order can be cancelled if an item turns out to be unavailable.</li>
+        <li>You can cancel an item yourself until the vendor marks it as shipped.</li>
+        <li>Delivery times and any delivery arrangements are agreed between you and the vendor.</li>
+      </ul>
+
+      <h2>Returns and problems</h2>
+      <p>If an item arrives damaged, wrong or not as described, contact the vendor and then us at <span data-site-email></span>. We will help the two of you reach a fair outcome. Each vendor is responsible for the quality of what they sell and for any refund or replacement they owe.</p>
+
+      <h2>Selling</h2>
+      <ul>
+        <li>New vendor stores are reviewed and approved by us before their products appear. We can refuse, suspend or remove a store or product at any time.</li>
+        <li>You set your own prices. Listings must be accurate and honest, with real photos and correct descriptions and stock.</li>
+        <li>You must deliver orders you accept, mark their progress truthfully, and treat customers fairly.</li>
+        <li>You may only use a customer's delivery details to deliver that order.</li>
+        <li>You must follow the law. Illegal, counterfeit, stolen, unsafe or prohibited items are not allowed.</li>
+      </ul>
+
+      <h2>What you must not do</h2>
+      <ul>
+        <li>Break the law or use the site to cheat, harass or harm anyone.</li>
+        <li>Try to get into accounts or parts of the site that are not yours, or disrupt the site.</li>
+        <li>Upload anything you do not have the right to use, or anything harmful or misleading.</li>
+      </ul>
+
+      <h2>Our responsibility</h2>
+      <p>We work to keep Vendorfy running and accurate, but we cannot promise it will always be available or error free. We are not responsible for the products vendors sell or for what vendors do. To the extent the law allows, our liability to you is limited to the amount you paid for the order the problem relates to. Nothing in these terms removes rights you have under Nigerian consumer protection law.</p>
+
+      <h2>Changes</h2>
+      <p>We may update these terms. We will change the date at the top, and by continuing to use the site after that you accept the new version.</p>
+
+      <h2>Governing law</h2>
+      <p>These terms are governed by the laws of the Federal Republic of Nigeria.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about these terms? Email <span data-site-email></span> or write to <span data-site="companyName"></span>, <span data-site="address"></span>. See also our <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+  </main>
+
+  <footer class="lfoot"></footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
