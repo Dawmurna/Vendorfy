@@ -10,7 +10,9 @@ ensureAdmin();
 
 const app = express();
 app.disable("x-powered-by");
-app.set("trust proxy", 1); // lets rate limiting see the real visitor when hosted behind a proxy
+// Lets rate limiting see the real visitor when hosted behind a proxy.
+// Behind Render alone use 1. With Vercel in front of Render, set TRUST_PROXY=2.
+app.set("trust proxy", Number(process.env.TRUST_PROXY || 1));
 
 // A few basic security headers on every response
 app.use((req, res, next) => {

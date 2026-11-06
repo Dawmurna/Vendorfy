@@ -1,0 +1,5 @@
+node_modules
+data
+server
+server.js
+seed.js

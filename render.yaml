@@ -1,0 +1,27 @@
+# One-click setup for Render (render.com). It builds and runs Vendorfy straight from GitHub.
+services:
+  - type: web
+    name: vendorfy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      # Test link settings. See "Putting it online" in the README before real customers arrive.
+      - key: DEMO_MODE
+        value: true
+      - key: DEV_SHOW_CODE
+        value: true
+      - key: AUTO_APPROVE_VENDORS
+        value: true

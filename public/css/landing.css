@@ -68,3 +68,7 @@
   .lcta .btn { width: 100%; }
   .lnav-signup { display: none; }
 }
+
+/* Fresh products grid: never wider than the screen */
+#fresh { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+@media (max-width: 480px) { #fresh { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }

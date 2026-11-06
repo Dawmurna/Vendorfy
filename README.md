@@ -6,7 +6,7 @@ Built with Node.js, Express and SQLite. The pages are plain HTML, CSS and JavaSc
 
 ## Run it on your computer
 
-1. Install Node.js (the LTS version) from nodejs.org.
+1. Install Node.js version 22 (LTS) from nodejs.org. Newer versions such as 24 can fail at `npm install` on Windows, because the database package has no ready-made build for them.
 2. Open this folder in VS Code and open the terminal (Terminal menu, New Terminal).
 3. Install the packages (only needed once, it creates the `node_modules` folder):
 
@@ -108,6 +108,47 @@ Never put secret files inside `public/`. Anything in that folder can be opened b
 - Uploads must be real JPG, PNG or WEBP pictures under 3 MB, saved with random file names.
 - Anything a person types (names, titles, notes) is escaped before it is shown, so nobody can inject code into pages.
 - New vendors are hidden from the shop until you approve them.
+
+## Company details, About, Contact, Privacy and Terms
+
+Your company details live in ONE file: `public/js/site.js`, at the top. The footer on every page, the About, Contact, Privacy and Terms pages all read from it.
+Anything in [square brackets] is a placeholder. Replace it with the real value (brackets included) and save:
+
+- `companyName`: your registered company name
+- `rcNumber`: your CAC registration number
+- `address` and `phone`: your business address and phone number
+- `email`: currently hello@vendorfy.shop. Create that mailbox with your domain host before going live.
+- `social`: paste your Instagram, X, Facebook and other page links. Empty ones are hidden.
+
+The Privacy Policy and Terms of Service are plain-language drafts written for what Vendorfy does today. Have a lawyer read them before you rely on them, and update them when you add online payments.
+
+## Putting it online for a test link (Render, free)
+
+GitHub only stores your code. To get a link people can open, the server has to run somewhere. Render can do it straight from your GitHub repository, and `render.yaml` in this project sets almost everything up.
+
+1. Push the project to GitHub (without `.env`, `node_modules` or `data`, which `.gitignore` already skips).
+2. Go to render.com, sign up with GitHub, click New, then Blueprint, and pick your Vendorfy repository.
+3. Render asks for `ADMIN_EMAIL` and `ADMIN_PASSWORD`. Use an email you do NOT shop with, and a password of 10+ characters.
+4. Click Apply. After a few minutes you get a link like `https://vendorfy.onrender.com`.
+5. In the Render dashboard you can add your own domain (vendorfy.shop) under Settings, Custom Domains.
+
+This setup is a test link, not the real thing:
+
+- `DEMO_MODE=true` shows the login code on the page, so anyone can log in as any shopper. That is fine for showing the site to friends and testers. Turn it off, and set up the `SMTP_` email settings, before real customers arrive.
+- The free plan sleeps when nobody visits (the first page load can take about a minute) and it does NOT keep files between restarts. Accounts, products and orders will reset now and then. For real use, choose a paid plan with a persistent disk, or move the database to a hosted one.
+- The sample products from `npm run seed` are not loaded there. Create a vendor account on the live link and add products by hand.
+
+## Showing it on Vercel (pages on Vercel, server on Render)
+
+Vercel cannot run the server and database, but it can show the pages and pass the site's data requests to your Render server. `vercel.json` does this.
+
+1. Put the project on Render first (section above) and note its link, for example `https://vendorfy.onrender.com`.
+2. Open `vercel.json` and replace both `YOUR-RENDER-NAME.onrender.com` with your Render address (no `https://` change needed, just the name).
+3. In Render, add the setting `TRUST_PROXY` = `2`.
+4. Push to GitHub. Vercel redeploys by itself.
+5. In Vercel, under Settings, General, make sure Root Directory is empty and the project points at this repository.
+
+Delete any old `index.html`, `css`, `js` and `images` folders from the top level of the GitHub repository. The current pages live inside `public/`.
 
 ## Before you put it on the internet
 

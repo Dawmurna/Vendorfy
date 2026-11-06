@@ -11,8 +11,13 @@ const transport = process.env.SMTP_HOST
     })
   : null;
 
+// DEMO_MODE=true is for a public test link only. The login code is shown on the page, so anyone
+// can log in as any shopper. Never use it once real customers are on the site.
+const DEMO = process.env.DEMO_MODE === "true";
+if (DEMO) console.warn("\n  [Vendorfy] DEMO_MODE is on. Login codes show on the page. Do not use this for real customers.\n");
+
 // Stop a risky setup before it can start
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" && !DEMO) {
   if (!transport) {
     console.error("SMTP_HOST is not set. Customers cannot receive login codes. Refusing to start in production.");
     process.exit(1);

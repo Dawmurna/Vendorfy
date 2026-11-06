@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/site.css" />
 </head>
 <body data-page="home">
 
@@ -51,11 +52,9 @@
 
       <nav>
         <a href="shop.html" class="nav-item active"><svg class="icon"><use href="#i-home"/></svg>Home</a>
-        <a href="#" class="nav-item"><svg class="icon"><use href="#i-grid"/></svg>Categories</a>
+        <a href="shop.html#categories" class="nav-item"><svg class="icon"><use href="#i-grid"/></svg>Categories</a>
         <a href="orders.html" class="nav-item"><svg class="icon"><use href="#i-bag"/></svg>Orders</a>
-        <a href="#" class="nav-item"><svg class="icon"><use href="#i-chat"/></svg>Chat</a>
         <a href="wishlist.html" class="nav-item"><svg class="icon"><use href="#i-heart"/></svg>Wishlist</a>
-        <a href="#" class="nav-item"><svg class="icon"><use href="#i-bell"/></svg>Notifications<span class="dot"></span></a>
         <a href="account.html" class="nav-item"><svg class="icon"><use href="#i-user"/></svg>Profile</a>
 
         <div class="nav-divider"></div>
@@ -117,10 +116,10 @@
         </section>
 
         <!-- Shop by Category -->
-        <section class="section">
+        <section class="section" id="categories">
           <div class="section-head">
             <h2 class="section-title">Shop by Category</h2>
-            <a href="#" class="link-blue">See all</a>
+            <a href="shop.html#categories" class="link-blue">See all</a>
           </div>
           <div class="category-row" id="category-row"></div>
         </section>
@@ -132,16 +131,16 @@
               <h2 class="section-title">Discount Sales</h2>
               <span class="timer" id="timer">02 : 45 : 18</span>
             </div>
-            <a href="#" class="link-blue">See more</a>
+            <a href="shop.html#all-products" class="link-blue">See more</a>
           </div>
           <div class="product-grid" id="discount-grid"></div>
         </section>
 
         <!-- Trending Now -->
-        <section class="section">
+        <section class="section" id="all-products">
           <div class="section-head">
             <h2 class="section-title">All Products</h2>
-            <a href="#" class="link-blue">See more</a>
+            <a href="shop.html#all-products" class="link-blue">See more</a>
           </div>
           <div class="product-grid" id="all-grid"></div>
         </section>
@@ -150,7 +149,7 @@
         <section class="section">
           <div class="section-head">
             <h2 class="section-title">Featured Vendors</h2>
-            <a href="#" class="link-blue">See more</a>
+            <a href="shop.html#all-products" class="link-blue">See more</a>
           </div>
           <div class="vendor-grid" id="vendor-grid"></div>
         </section>
@@ -159,52 +158,21 @@
         <section class="section">
           <div class="section-head">
             <h2 class="section-title">New Arrivals</h2>
-            <a href="#" class="link-blue">See more</a>
+            <a href="shop.html#all-products" class="link-blue">See more</a>
           </div>
           <div class="product-grid" id="arrivals-grid"></div>
         </section>
       </main>
 
       <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-grid">
-          <div class="footer-about">
-            <a href="index.html" class="logo" style="padding:0">vendorfy</a>
-            <p>Your trusted marketplace for quality products from top vendors. Trendy looks, premium quality, everyday for you.</p>
-            <div class="socials">
-              <a href="#">IG</a><a href="#">X</a><a href="#">FB</a><a href="#">YT</a><a href="#">IN</a>
-            </div>
-          </div>
-          <div>
-            <h4>Shop</h4>
-            <ul><li>All Products</li><li>Categories</li><li>New Arrivals</li><li>Discount Sales</li></ul>
-          </div>
-          <div>
-            <h4>Vendors</h4>
-            <ul><li><a href="vendor-login.html">Become a Vendor</a></li><li>Featured Vendors</li><li>Vendor Guidelines</li></ul>
-          </div>
-          <div>
-            <h4>Help</h4>
-            <ul><li>Track Order</li><li>Returns &amp; Refunds</li><li>Shipping Information</li><li>FAQ</li><li>Contact Us</li></ul>
-          </div>
-          <div>
-            <h4>Get the App</h4>
-            <p style="color:var(--text-muted);font-size:13px;margin:0 0 12px">Shop on the go with the Vendorfy app.</p>
-            <a href="#" class="app-badge">Google Play</a>
-            <a href="#" class="app-badge">App Store</a>
-          </div>
-        </div>
-        <div class="copyright">
-          <span>© 2026 Vendorfy. All rights reserved.</span>
-          <span>Privacy Policy &nbsp; Terms of Service &nbsp; Cookie Policy</span>
-        </div>
-      </footer>
+      <footer class="footer"></footer>
 
     </div>
   </div>
 
   <script src="js/utils.js"></script>
   <script src="js/data.js"></script>
+  <script src="js/site.js"></script>
   <script src="js/main.js"></script>
   <script src="js/home.js"></script>
 </body>
