@@ -23,5 +23,7 @@ services:
         value: true
       - key: DEV_SHOW_CODE
         value: true
+      - key: SEED_DEMO
+        value: true
       - key: AUTO_APPROVE_VENDORS
         value: true

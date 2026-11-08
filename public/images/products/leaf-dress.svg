@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="leaf dress">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3f9f6b" stop-opacity="0.78"/><stop offset="1" stop-color="#3f9f6b"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#g)"/>
+<circle cx="330" cy="70" r="90" fill="#fff" fill-opacity="0.08"/><circle cx="50" cy="360" r="110" fill="#fff" fill-opacity="0.07"/>
+<path fill="#fff" fill-opacity="0.92" d="M165 90 L235 90 L225 170 L175 170 Z"/><path fill="#fff" fill-opacity="0.92" d="M175 170 L225 170 L292 320 Q200 346 108 320 Z"/><rect fill="#fff" fill-opacity="0.92" x="172" y="62" width="9" height="32" rx="4"/><rect fill="#fff" fill-opacity="0.92" x="219" y="62" width="9" height="32" rx="4"/>
+</svg>

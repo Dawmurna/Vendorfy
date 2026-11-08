@@ -136,7 +136,7 @@ This setup is a test link, not the real thing:
 
 - `DEMO_MODE=true` shows the login code on the page, so anyone can log in as any shopper. That is fine for showing the site to friends and testers. Turn it off, and set up the `SMTP_` email settings, before real customers arrive.
 - The free plan sleeps when nobody visits (the first page load can take about a minute) and it does NOT keep files between restarts. Accounts, products and orders will reset now and then. For real use, choose a paid plan with a persistent disk, or move the database to a hosted one.
-- The sample products from `npm run seed` are not loaded there. Create a vendor account on the live link and add products by hand.
+- `SEED_DEMO=true` fills the shop with 15 sample products (with simple placeholder pictures) every time the server starts with an empty database, so the free link is never bare after a reset. It does nothing when products already exist. Remove it before real vendors and customers arrive, and delete the sample vendors then.
 
 ## Showing it on Vercel (pages on Vercel, server on Render)
 

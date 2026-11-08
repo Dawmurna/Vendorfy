@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="sneakers">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b8def" stop-opacity="0.78"/><stop offset="1" stop-color="#5b8def"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#g)"/>
+<circle cx="330" cy="70" r="90" fill="#fff" fill-opacity="0.08"/><circle cx="50" cy="360" r="110" fill="#fff" fill-opacity="0.07"/>
+<path fill="#fff" fill-opacity="0.92" d="M88 272 L88 198 Q150 190 192 150 L216 166 Q252 202 312 216 Q334 222 334 246 L334 272 Z"/><rect fill="#fff" fill-opacity="0.92" x="82" y="272" width="258" height="24" rx="12"/><path d="M200 175 L222 192 M184 190 L206 207" stroke="#000" stroke-opacity="0.18" stroke-width="7" stroke-linecap="round"/>
+</svg>

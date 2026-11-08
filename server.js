@@ -47,5 +47,10 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Something went wrong." });
 });
 
+require("./server/demo").repairDemoImages();
+
+// For test and demo links on hosts that forget their files: refill the shop whenever it is empty.
+if (process.env.SEED_DEMO === "true") require("./server/demo").addDemoDataIfEmpty();
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Vendorfy is running at http://localhost:${PORT}`));
