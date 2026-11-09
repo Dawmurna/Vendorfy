@@ -72,23 +72,28 @@ function addDemoDataIfEmpty() {
   return true;
 }
 
-// Older sample products point to .jpg photos that are not in the project.
-// If a .jpg is missing but a matching .svg placeholder exists, switch the product to the placeholder.
+// Keeps sample products pointing at the best picture that exists in public/images/products.
+// A real photo (jpg, png or webp) with the same name wins over the .svg placeholder, so you can
+// replace a placeholder just by dropping a file with the same name into that folder.
+// If a picture is missing, the product falls back to whatever matching file is left.
 function repairDemoImages() {
   const fs = require("fs");
   const path = require("path");
   const dir = path.join(__dirname, "..", "public", "images", "products");
-  const rows = db.prepare("SELECT id, images FROM products WHERE images LIKE '%/images/products/%.jpg%'").all();
+  const ORDER = ["jpg", "jpeg", "png", "webp", "svg"];
+  const rows = db.prepare("SELECT id, images FROM products WHERE images LIKE '%/images/products/%'").all();
   let fixed = 0;
   for (const row of rows) {
     let list;
     try { list = JSON.parse(row.images); } catch (e) { continue; }
     let changed = false;
     list = list.map((u) => {
-      const m = /^\/images\/products\/([a-z0-9-]+)\.jpg$/.exec(u);
-      if (m && !fs.existsSync(path.join(dir, m[1] + ".jpg")) && fs.existsSync(path.join(dir, m[1] + ".svg"))) {
+      const m = /^\/images\/products\/([a-z0-9-]+)\.(svg|jpe?g|png|webp)$/.exec(u);
+      if (!m) return u;
+      const best = ORDER.find((ext) => fs.existsSync(path.join(dir, m[1] + "." + ext)));
+      if (best && best !== m[2]) {
         changed = true;
-        return "/images/products/" + m[1] + ".svg";
+        return "/images/products/" + m[1] + "." + best;
       }
       return u;
     });
@@ -97,7 +102,7 @@ function repairDemoImages() {
       fixed++;
     }
   }
-  if (fixed) console.log(`[Vendorfy] Switched ${fixed} sample products to placeholder pictures.`);
+  if (fixed) console.log(`[Vendorfy] Updated pictures on ${fixed} sample products.`);
 }
 
 module.exports = { addDemoData, addDemoDataIfEmpty, repairDemoImages };

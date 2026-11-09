@@ -150,6 +150,32 @@ Vercel cannot run the server and database, but it can show the pages and pass th
 
 Delete any old `index.html`, `css`, `js` and `images` folders from the top level of the GitHub repository. The current pages live inside `public/`.
 
+## Replacing the sample pictures with your own photos
+
+The sample products use placeholder pictures in `public/images/products/`. To swap one for a real photo,
+save your photo in that folder with the SAME NAME as the placeholder, but ending in `.jpg`, `.png` or `.webp`. Keep the name lowercase.
+Restart the server (or push to GitHub so it redeploys) and the product uses your photo. The `.svg` placeholder can stay, it is only used if your photo is missing.
+
+| Name to use | Product |
+| --- | --- |
+| `leaf-dress` | Leaf Print Fit Summer Dress |
+| `black-dress` | Black Flower Dress |
+| `puff-dress` | Puff Sleeve Dress |
+| `satin-dress` | Satin Evening Dress (NovaWear) |
+| `satin-dress-2` | Satin Evening Dress (Luxe Closet) |
+| `floral-maxi` | Floral Maxi Dress |
+| `boho-dress` | Boho Floral Dress |
+| `jeans` | Baggy Lady Jeans |
+| `handbag` | Leather Handbag (brown) |
+| `handbag-green` | Leather Handbag (green) |
+| `sneakers` | White Sneakers |
+| `watch` | Gold Wristwatch |
+| `table-lamp` | Table Lamp |
+| `microwave` | Microwave Oven |
+| `headphones` | Wireless Headphones |
+
+Tips: use square or near-square photos, about 800 by 800 pixels, under 500 KB each. Real vendor products use the photos the vendor uploads in the dashboard, not these files.
+
 ## Before you put it on the internet
 
 - Set up email. Fill in the `SMTP_` lines in `.env` with an email service (Brevo, Mailgun, Gmail app password or similar). In production the server will not start without them, because shoppers could not get their codes.
