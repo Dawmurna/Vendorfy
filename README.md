@@ -136,7 +136,7 @@ This setup is a test link, not the real thing:
 
 - `DEMO_MODE=true` shows the login code on the page, so anyone can log in as any shopper. That is fine for showing the site to friends and testers. Turn it off, and set up the `SMTP_` email settings, before real customers arrive.
 - The free plan sleeps when nobody visits (the first page load can take about a minute) and it does NOT keep files between restarts. Accounts, products and orders will reset now and then. For real use, choose a paid plan with a persistent disk, or move the database to a hosted one.
-- `SEED_DEMO=true` fills the shop with 15 sample products (with simple placeholder pictures) every time the server starts with an empty database, so the free link is never bare after a reset. It does nothing when products already exist. Remove it before real vendors and customers arrive, and delete the sample vendors then.
+- `SEED_DEMO=true` keeps the shop filled with the sample products from `server/demo.js` every time the server starts. It adds any that are missing, updates their title, price and picture, and never resets stock. So the free link is never bare after a reset. A sample product you delete comes back on the next start. Remove this setting before real vendors and customers arrive, and delete the sample vendors then.
 
 ## Showing it on Vercel (pages on Vercel, server on Render)
 
@@ -156,23 +156,33 @@ The sample products use placeholder pictures in `public/images/products/`. To sw
 save your photo in that folder with the SAME NAME as the placeholder, but ending in `.jpg`, `.png` or `.webp`. Keep the name lowercase.
 Restart the server (or push to GitHub so it redeploys) and the product uses your photo. The `.svg` placeholder can stay, it is only used if your photo is missing.
 
-| Name to use | Product |
-| --- | --- |
-| `leaf-dress` | Leaf Print Fit Summer Dress |
-| `black-dress` | Black Flower Dress |
-| `puff-dress` | Puff Sleeve Dress |
-| `satin-dress` | Satin Evening Dress (NovaWear) |
-| `satin-dress-2` | Satin Evening Dress (Luxe Closet) |
-| `floral-maxi` | Floral Maxi Dress |
-| `boho-dress` | Boho Floral Dress |
-| `jeans` | Baggy Lady Jeans |
-| `handbag` | Leather Handbag (brown) |
-| `handbag-green` | Leather Handbag (green) |
-| `sneakers` | White Sneakers |
-| `watch` | Gold Wristwatch |
-| `table-lamp` | Table Lamp |
-| `microwave` | Microwave Oven |
-| `headphones` | Wireless Headphones |
+| Name to use | Product | Picture now |
+| --- | --- | --- |
+| `leaf-dress` | Leaf Print Fit Summer Dress (NovaWear) | placeholder |
+| `table-lamp` | Table Lamp (Luxury Homes) | placeholder |
+| `black-dress` | Black Flower Dress (NovaWear) | placeholder |
+| `puff-dress` | Puff Sleeve Dress (Modish Hub) | placeholder |
+| `handbag` | Tan Leather Tote (Chic Collection) | your photo |
+| `sneakers` | White Sneakers (Remix) | placeholder |
+| `watch` | Gold Wristwatch (Timeless Hub) | your photo |
+| `microwave` | Microwave Oven (Luxury Homes) | placeholder |
+| `satin-dress` | Satin Evening Dress (NovaWear) | placeholder |
+| `floral-maxi` | Floral Maxi Dress (NovaWear) | placeholder |
+| `boho-dress` | Boho Floral Dress (Luxe Closet) | placeholder |
+| `jeans` | Baggy Lady Jeans (Modish Hub) | placeholder |
+| `headphones` | Wireless Headphones (Remix) | placeholder |
+| `satin-dress-2` | Satin Evening Dress (Luxe Closet) | placeholder |
+| `gold-chronograph` | Gold Chronograph Watch (Timeless Hub) | your photo |
+| `tote-grey` | Grey Structured Tote (Chic Collection) | your photo |
+| `tote-burgundy` | Burgundy Structured Tote (Chic Collection) | your photo |
+| `tote-mocha` | Mocha Structured Tote (Chic Collection) | your photo |
+| `tote-black` | Black Structured Tote (Chic Collection) | your photo |
+| `handbag-black` | Black Textured Handbag (Chic Collection) | your photo |
+| `handbag-beige` | Beige Teardrop Handbag (Chic Collection) | your photo |
+| `handbag-taupe` | Taupe Handbag with Silver Handle (Chic Collection) | your photo |
+| `clutch-black` | Black Evening Clutch (Luxe Closet) | your photo |
+| `briefcase-black` | Black Leather Laptop Bag (Timeless Hub) | your photo |
+| `briefcase-tan` | Tan Leather Briefcase (Timeless Hub) | your photo |
 
 Tips: use square or near-square photos, about 800 by 800 pixels, under 500 KB each. Real vendor products use the photos the vendor uploads in the dashboard, not these files.
 

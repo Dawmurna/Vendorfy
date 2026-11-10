@@ -10,4 +10,4 @@ if (db.prepare("SELECT COUNT(*) AS n FROM products").get().n > 0 && !process.arg
   process.exit(0);
 }
 const r = addDemoData();
-console.log(`Added ${r.vendors} sample vendors and ${r.products} sample products.`);
+console.log(`Sample shop ready: ${r.added} products added, ${r.updated} updated, ${r.removed} removed.`);
