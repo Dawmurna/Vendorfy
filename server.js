@@ -3,6 +3,7 @@ const path = require("path");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 
+const { isTrue } = require("./server/env");
 const { ensureAdmin } = require("./server/db");
 const { loadUser } = require("./server/auth");
 
@@ -48,7 +49,7 @@ app.use((err, req, res, next) => {
 });
 
 // For test and demo links on hosts that forget their files: keep the sample shop filled in.
-if (process.env.SEED_DEMO === "true") require("./server/demo").syncDemoData();
+if (isTrue(process.env.SEED_DEMO)) require("./server/demo").syncDemoData();
 require("./server/demo").repairDemoImages();
 
 const PORT = process.env.PORT || 3000;

@@ -183,6 +183,24 @@ Restart the server (or push to GitHub so it redeploys) and the product uses your
 | `clutch-black` | Black Evening Clutch (Luxe Closet) | your photo |
 | `briefcase-black` | Black Leather Laptop Bag (Timeless Hub) | your photo |
 | `briefcase-tan` | Tan Leather Briefcase (Timeless Hub) | your photo |
+| `linen-set-white` | White Linen Shirt and Trouser Set (Linen Lane) | your photo |
+| `linen-shirt-olive` | Olive Linen Shirt (Linen Lane) | your photo |
+| `linen-set-sand-knot` | Sand Knot-Button Linen Set (Linen Lane) | your photo |
+| `linen-set-navy-sand` | Navy Shirt and Sand Trouser Set (Linen Lane) | your photo |
+| `linen-mandarin-espresso` | Espresso Mandarin Collar Linen Shirt (Linen Lane) | your photo |
+| `linen-henley-black` | Black Linen Henley Shirt (Linen Lane) | your photo |
+| `linen-shirt-apricot` | Apricot Linen Shirt (Linen Lane) | your photo |
+| `linen-set-sand-navy` | Sand Shirt and Navy Trouser Set (Linen Lane) | your photo |
+| `linen-popover-stripe` | Cream Striped Popover Shirt (Linen Lane) | your photo |
+| `linen-set-navy` | Navy Linen Shirt and Trouser Set (Linen Lane) | your photo |
+| `linen-popover-ivory` | Ivory Linen Popover Shirt (Linen Lane) | your photo |
+| `linen-popover-brown` | Brown Linen Popover Shirt (Linen Lane) | your photo |
+| `linen-henley-ivory` | Ivory Henley Shirt (Linen Lane) | your photo |
+| `linen-popover-darkbrown` | Dark Brown Linen Popover Shirt (Linen Lane) | your photo |
+| `linen-set-stripe-sand` | Sand Striped Shirt and Trouser Set (Linen Lane) | your photo |
+| `linen-henley-mocha` | Mocha Linen Henley Shirt (Linen Lane) | your photo |
+| `linen-set-stripe-green` | Green Striped Shirt and Trouser Set (Linen Lane) | your photo |
+| `linen-set-stripe-rose` | Rose Striped Shirt and Trouser Set (Linen Lane) | your photo |
 
 Tips: use square or near-square photos, about 800 by 800 pixels, under 500 KB each. Real vendor products use the photos the vendor uploads in the dashboard, not these files.
 

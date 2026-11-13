@@ -7,7 +7,7 @@ const { db } = require("./db");
 const vendors = [
   ["NovaWear", "Fashion"], ["Luxury Homes", "Home & Kitchen"], ["Modish Hub", "Fashion"],
   ["Chic Collection", "Fashion"], ["Luxe Closet", "Fashion"], ["Remix", "Fashion"],
-  ["Timeless Hub", "Fashion"],
+  ["Timeless Hub", "Fashion"], ["Linen Lane", "Fashion"],
 ];
 
 // [vendor, title, price, oldPrice, category, picture name, sizes]
@@ -40,6 +40,24 @@ const products = [
   ["Luxe Closet", "Black Evening Clutch", 28000, null, "Fashion", "clutch-black", ""],
   ["Timeless Hub", "Black Leather Laptop Bag", 65000, null, "Fashion", "briefcase-black", ""],
   ["Timeless Hub", "Tan Leather Briefcase", 68000, null, "Fashion", "briefcase-tan", ""],
+  ["Linen Lane", "White Linen Shirt and Trouser Set", 48000, null, "Fashion", "linen-set-white", DRESS],
+  ["Linen Lane", "Olive Linen Shirt", 24000, null, "Fashion", "linen-shirt-olive", DRESS],
+  ["Linen Lane", "Sand Knot-Button Linen Set", 52000, null, "Fashion", "linen-set-sand-knot", DRESS],
+  ["Linen Lane", "Navy Shirt and Sand Trouser Set", 46000, null, "Fashion", "linen-set-navy-sand", DRESS],
+  ["Linen Lane", "Espresso Mandarin Collar Linen Shirt", 26000, null, "Fashion", "linen-mandarin-espresso", DRESS],
+  ["Linen Lane", "Black Linen Henley Shirt", 22000, null, "Fashion", "linen-henley-black", DRESS],
+  ["Linen Lane", "Apricot Linen Shirt", 24000, null, "Fashion", "linen-shirt-apricot", DRESS],
+  ["Linen Lane", "Sand Shirt and Navy Trouser Set", 46000, null, "Fashion", "linen-set-sand-navy", DRESS],
+  ["Linen Lane", "Cream Striped Popover Shirt", 23000, null, "Fashion", "linen-popover-stripe", DRESS],
+  ["Linen Lane", "Navy Linen Shirt and Trouser Set", 45000, null, "Fashion", "linen-set-navy", DRESS],
+  ["Linen Lane", "Ivory Linen Popover Shirt", 25000, null, "Fashion", "linen-popover-ivory", DRESS],
+  ["Linen Lane", "Brown Linen Popover Shirt", 27000, null, "Fashion", "linen-popover-brown", DRESS],
+  ["Linen Lane", "Ivory Henley Shirt", 20000, null, "Fashion", "linen-henley-ivory", DRESS],
+  ["Linen Lane", "Dark Brown Linen Popover Shirt", 27000, null, "Fashion", "linen-popover-darkbrown", DRESS],
+  ["Linen Lane", "Sand Striped Shirt and Trouser Set", 55000, null, "Fashion", "linen-set-stripe-sand", DRESS],
+  ["Linen Lane", "Mocha Linen Henley Shirt", 23000, null, "Fashion", "linen-henley-mocha", DRESS],
+  ["Linen Lane", "Green Striped Shirt and Trouser Set", 55000, null, "Fashion", "linen-set-stripe-green", DRESS],
+  ["Linen Lane", "Rose Striped Shirt and Trouser Set", 55000, null, "Fashion", "linen-set-stripe-rose", DRESS],
 ];
 
 const fs = require("fs");

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="linen set stripe sand">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a8896a" stop-opacity="0.78"/><stop offset="1" stop-color="#a8896a"/></linearGradient>
+<pattern id="st" width="22" height="10" patternUnits="userSpaceOnUse"><rect width="11" height="10" fill="#fff" fill-opacity="0.95"/><rect x="11" width="11" height="10" fill="#fff" fill-opacity="0.42"/></pattern>
+</defs>
+<rect width="400" height="400" fill="url(#g)"/>
+<circle cx="330" cy="70" r="90" fill="#fff" fill-opacity="0.08"/><circle cx="50" cy="360" r="110" fill="#fff" fill-opacity="0.07"/>
+<path fill="#fff" fill-opacity="0.93" d="M146 205 L254 205 L268 372 L214 372 L200 262 L186 372 L132 372 Z"/><path d="M146 205 L254 205 L254 222 L146 222 Z" fill="#000" fill-opacity="0.16"/><g transform="translate(60 -12) scale(0.7)"><path d="M132 104 L175 90 L225 90 L268 104 L300 118 L338 262 L308 272 L262 160 L258 335 L142 335 L138 160 L92 272 L62 262 L100 118 Z" fill="url(#st)"/><path d="M175 90 L200 126 L176 132 Z" fill="#000" fill-opacity="0.16"/><path d="M225 90 L200 126 L224 132 Z" fill="#000" fill-opacity="0.16"/><path d="M200 126 L200 335" stroke="#000" stroke-opacity="0.18" stroke-width="3"/><circle cx="200" cy="160" r="4.5" fill="#000" fill-opacity="0.16"/><circle cx="200" cy="200" r="4.5" fill="#000" fill-opacity="0.16"/><circle cx="200" cy="240" r="4.5" fill="#000" fill-opacity="0.16"/><circle cx="200" cy="280" r="4.5" fill="#000" fill-opacity="0.16"/></g>
+</svg>

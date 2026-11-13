@@ -3,6 +3,7 @@
 const crypto = require("crypto");
 const express = require("express");
 const rateLimit = require("express-rate-limit");
+const { isTrue } = require("../env");
 const { db } = require("../db");
 const { setLoginCookie, secret } = require("../auth");
 const { sendLoginCode } = require("../mailer");
@@ -73,7 +74,7 @@ router.post("/request-code", askLimiter, async (req, res) => {
 
   // Test helper for your own computer only (the server refuses to start in production with this on)
   const body = { ...SAME_ANSWER };
-  if (process.env.DEV_SHOW_CODE === "true" && (process.env.NODE_ENV !== "production" || process.env.DEMO_MODE === "true")) body.devCode = code;
+  if (isTrue(process.env.DEV_SHOW_CODE) && (process.env.NODE_ENV !== "production" || isTrue(process.env.DEMO_MODE))) body.devCode = code;
   res.json(body);
 });
 
