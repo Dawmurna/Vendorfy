@@ -1,7 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const rateLimit = require("express-rate-limit");
-const { isTrue } = require("../env");
 const { db } = require("../db");
 const { setLoginCookie, clearLoginCookie, requireLogin } = require("../auth");
 const { CATEGORIES, cleanText } = require("../validate");
@@ -45,7 +44,7 @@ router.post("/register", limiter, (req, res) => {
   if (!storeName) return res.status(400).json({ error: "Store name must be 2 to 40 characters." });
   if (!CATEGORIES.includes(category)) return res.status(400).json({ error: "Please choose a category." });
 
-  const status = isTrue(process.env.AUTO_APPROVE_VENDORS) ? "approved" : "pending";
+  const status = process.env.AUTO_APPROVE_VENDORS === "true" ? "approved" : "pending";
 
   try {
     const create = db.transaction(() => {

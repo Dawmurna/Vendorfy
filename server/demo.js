@@ -5,8 +5,7 @@ const bcrypt = require("bcryptjs");
 const { db } = require("./db");
 
 const vendors = [
-  ["NovaWear", "Fashion"], ["Luxury Homes", "Home & Kitchen"], ["Modish Hub", "Fashion"],
-  ["Chic Collection", "Fashion"], ["Luxe Closet", "Fashion"], ["Remix", "Fashion"],
+  ["Chic Collection", "Fashion"], ["Luxe Closet", "Fashion"],
   ["Timeless Hub", "Fashion"], ["Linen Lane", "Fashion"],
 ];
 
@@ -15,20 +14,8 @@ const vendors = [
 // It also identifies the product, so changing a title or price here updates it on the next start.
 const DRESS = "S,M,L,XL";
 const products = [
-  ["NovaWear", "Leaf Print Fit Summer Dress", 25000, 29000, "Fashion", "leaf-dress", DRESS],
-  ["Luxury Homes", "Table Lamp", 23000, 28000, "Home & Kitchen", "table-lamp", ""],
-  ["NovaWear", "Black Flower Dress", 30000, 33000, "Fashion", "black-dress", DRESS],
-  ["Modish Hub", "Puff Sleeve Dress", 26000, 29000, "Fashion", "puff-dress", DRESS],
   ["Chic Collection", "Tan Leather Tote", 45000, 55000, "Fashion", "handbag", ""],
-  ["Remix", "White Sneakers", 45000, null, "Fashion", "sneakers", "40,41,42,43"],
   ["Timeless Hub", "Gold Wristwatch", 175000, null, "Fashion", "watch", ""],
-  ["Luxury Homes", "Microwave Oven", 175000, null, "Home & Kitchen", "microwave", ""],
-  ["NovaWear", "Satin Evening Dress", 42000, null, "Fashion", "satin-dress", DRESS],
-  ["NovaWear", "Floral Maxi Dress", 46000, null, "Fashion", "floral-maxi", DRESS],
-  ["Luxe Closet", "Boho Floral Dress", 29000, null, "Fashion", "boho-dress", DRESS],
-  ["Modish Hub", "Baggy Lady Jeans", 30000, null, "Fashion", "jeans", DRESS],
-  ["Remix", "Wireless Headphones", 85000, null, "Electronics", "headphones", ""],
-  ["Luxe Closet", "Satin Evening Dress", 42000, null, "Fashion", "satin-dress-2", DRESS],
   ["Timeless Hub", "Gold Chronograph Watch", 195000, null, "Fashion", "gold-chronograph", ""],
   ["Chic Collection", "Grey Structured Tote", 48000, null, "Fashion", "tote-grey", ""],
   ["Chic Collection", "Burgundy Structured Tote", 48000, null, "Fashion", "tote-burgundy", ""],
@@ -128,6 +115,16 @@ const run = db.transaction(() => {
       db.prepare("DELETE FROM products WHERE id = ?").run(id);
       result.removed++;
     }
+  }
+
+  // Sample vendors that are no longer in the list: remove them once they have no products or orders
+  const old = db.prepare(`SELECT v.id AS vid, u.id AS uid, v.store_name FROM vendors v JOIN users u ON u.id = v.user_id
+      WHERE u.email LIKE ?`).all(SAMPLE_EMAIL);
+  const names = new Set(vendors.map((v) => v[0]));
+  for (const o of old) {
+    if (names.has(o.store_name)) continue;
+    const busy = db.prepare("SELECT (SELECT COUNT(*) FROM products WHERE vendor_id=?) + (SELECT COUNT(*) FROM order_items WHERE vendor_id=?) AS n").get(o.vid, o.vid).n;
+    if (!busy) db.prepare("DELETE FROM users WHERE id = ?").run(o.uid);
   }
   return result;
 });

@@ -152,26 +152,13 @@ Delete any old `index.html`, `css`, `js` and `images` folders from the top level
 
 ## Replacing the sample pictures with your own photos
 
-The sample products use placeholder pictures in `public/images/products/`. To swap one for a real photo,
-save your photo in that folder with the SAME NAME as the placeholder, but ending in `.jpg`, `.png` or `.webp`. Keep the name lowercase.
-Restart the server (or push to GitHub so it redeploys) and the product uses your photo. The `.svg` placeholder can stay, it is only used if your photo is missing.
+The sample shop only contains products that have a real photo, in `public/images/products/`. To change a picture, save your photo there with the SAME NAME as the one it replaces, ending in `.jpg`, `.png` or `.webp`. Keep the name lowercase.
+To add a product, add a line for it in `server/demo.js`, put its photo in that folder with the matching name, and restart (or push so Render redeploys).
 
 | Name to use | Product | Picture now |
 | --- | --- | --- |
-| `leaf-dress` | Leaf Print Fit Summer Dress (NovaWear) | placeholder |
-| `table-lamp` | Table Lamp (Luxury Homes) | placeholder |
-| `black-dress` | Black Flower Dress (NovaWear) | placeholder |
-| `puff-dress` | Puff Sleeve Dress (Modish Hub) | placeholder |
 | `handbag` | Tan Leather Tote (Chic Collection) | your photo |
-| `sneakers` | White Sneakers (Remix) | placeholder |
 | `watch` | Gold Wristwatch (Timeless Hub) | your photo |
-| `microwave` | Microwave Oven (Luxury Homes) | placeholder |
-| `satin-dress` | Satin Evening Dress (NovaWear) | placeholder |
-| `floral-maxi` | Floral Maxi Dress (NovaWear) | placeholder |
-| `boho-dress` | Boho Floral Dress (Luxe Closet) | placeholder |
-| `jeans` | Baggy Lady Jeans (Modish Hub) | placeholder |
-| `headphones` | Wireless Headphones (Remix) | placeholder |
-| `satin-dress-2` | Satin Evening Dress (Luxe Closet) | placeholder |
 | `gold-chronograph` | Gold Chronograph Watch (Timeless Hub) | your photo |
 | `tote-grey` | Grey Structured Tote (Chic Collection) | your photo |
 | `tote-burgundy` | Burgundy Structured Tote (Chic Collection) | your photo |

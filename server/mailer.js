@@ -1,20 +1,19 @@
 // Sends the login code by email.
 // With no SMTP settings in .env (your own computer), the code is printed in the terminal instead.
 const nodemailer = require("nodemailer");
-const { isTrue } = require("./env");
 
 const transport = process.env.SMTP_HOST
   ? nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT || 587),
-      secure: isTrue(process.env.SMTP_SECURE),
+      secure: process.env.SMTP_SECURE === "true",
       auth: process.env.SMTP_USER ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } : undefined,
     })
   : null;
 
 // DEMO_MODE=true is for a public test link only. The login code is shown on the page, so anyone
 // can log in as any shopper. Never use it once real customers are on the site.
-const DEMO = isTrue(process.env.DEMO_MODE);
+const DEMO = process.env.DEMO_MODE === "true";
 if (DEMO) console.warn("\n  [Vendorfy] DEMO_MODE is on. Login codes show on the page. Do not use this for real customers.\n");
 
 // Stop a risky setup before it can start
@@ -23,7 +22,7 @@ if (process.env.NODE_ENV === "production" && !DEMO) {
     console.error("SMTP_HOST is not set. Customers cannot receive login codes. Refusing to start in production.");
     process.exit(1);
   }
-  if (isTrue(process.env.DEV_SHOW_CODE)) {
+  if (process.env.DEV_SHOW_CODE === "true") {
     console.error("DEV_SHOW_CODE=true would let anyone log in as anyone. Remove it. Refusing to start in production.");
     process.exit(1);
   }
